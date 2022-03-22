@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="maincontent">
+      <form id="couponGen">
+        <ul class="wrapper">
+          <li class="form-row">
+            <label>Enter Name</label>
+            <input type="text" id="name" value="" />
+          </li>
+          <li class="form-row">
+            <input
+              id="getCoupon_btn"
+              type="button"
+              value="Get Coupon Code"
+              onClick="storeCoupon()"
+            />
+          </li>
+          <li class="form-row">
+            <label>Your Coupon Code</label>
+            <input id="coupon" type="text" value="" readonly />
+          </li>
+        </ul>
+      </form>
+      <div class="msg"></div>
+      <form id="couponApply">
+        <ul class="wrapper">
+          <li class="form-row">
+            <label>Enter Name</label>
+            <input type="text" id="name" value="" />
+          </li>
+          <li class="form-row">
+            <label>Enter Purchase Amount</label>
+            <input type="text" id="amount" value="" />
+          </li>
+          <li class="form-row">
+            <label>Enter Coupon Code</label>
+            <input type="text" id="couponcode" value="" />
+          </li>
+          <li class="form-row">
+            <input
+              id="applyCoupon_btn"
+              type="button"
+              value="Apply Coupon Code"
+              onClick="checkCoupon()"
+            />
+          </li>
+          <li class="form-row">
+            <label>Amount Payable</label>
+            <input type="text" id="payable" value="" readonly />
+          </li>
+        </ul>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

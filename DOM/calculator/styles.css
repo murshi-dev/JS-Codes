@@ -1,0 +1,56 @@
+:root {
+  --light: #7f9fcf;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: var(--light);
+  z-index: -1;
+}
+
+input {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.btn {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  font-size: large;
+}
+
+#displayArray {
+  border: 3px solid white;
+  border-radius: 10px;
+  padding: 1em 1em;
+  color: white;
+}
+
+.ad-functions-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.inputnum,
+.calButtons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#result {
+  border: 3px solid black;
+  border-radius: 10px;
+  padding: 1em 1em;
+}
