@@ -1,0 +1,14 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <!-- way 1 -->
+        <!-- <input type="button" value="click" onclick="window.alert('hi');"> -->
+
+        <!-- way 2 -->
+        <input type="button" value="click in" onclick="intro();">
+
+        <!-- way3 -->
+        <script src="script.js"></script>
+    </body>
+</html>

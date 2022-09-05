@@ -1,5 +1,7 @@
-function intro()
+function onClick()
 {
-    window.alert("hi");
-    window.alert("bye");
+    console.log("clicked");
 }
+
+const button=document.querySelector('button');
+button.addEventListener('click',onClick);
