@@ -1,0 +1,36 @@
+body{
+    font-size: 20px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.container
+{
+    border: 2px solid black;
+    padding:15px;
+    border-radius: 5px;
+    width:500px;
+}
+.form-control
+{
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position:relative;
+}
+.form-control label{
+    display:block;
+}
+.form-control input{
+    display:block;
+    width:100%;
+}
+#form button{
+    display:block;
+    width:100%;
+}
+#s1,#s2
+{
+    visibility: hidden;
+    position:absolute;
+    color:red;
+}

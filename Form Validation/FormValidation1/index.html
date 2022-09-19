@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="form">
+      <!-- design the form here -->
+      <form id="myForm">
+        <!-- create a label and a text box for first name -->
+        <label id="firstname">FirstName</label>
+        <input type="text" name="firstname" /><br />
+        <!-- create a label and a text box for last name -->
+        <label id="lastname">LastName</label>
+        <input type="text" name="lastname" /><br />
+        <!-- create a label and a text box for username -->
+        <label id="username">UserName</label>
+        <input type="text" name="username" /><br />
+        <!-- create a label and a password box for password -->
+        <label id="password">Password</label>
+        <input type="password" name="password" /><br />
+        <!-- create a label and a select list for state -->
+        <label id="state">State</label>
+        <select name="state">
+          <option value="">Choose an option</option>
+          <option value="penang">Penang</option>
+          <option value="perlis">Perlis</option>
+          <option value="kedah">Kedah</option></select
+        ><br />
+        <!-- create a label and radio button for gender -->
+        <label id="gender">Gender</label>
+        <input type="radio" name="gender" value="male" />Male
+        <input type="radio" name="gender" value="female" />Female
+        <br />
+        <!-- create a label and check box for course taken -->
+        <label id="course">Course Taken</label>
+        <input type="checkbox" name="course1" value="course1" />POIP
+        <input type="checkbox" name="course2" value="course2" />DSA
+        <input type="checkbox" name="course3" value="course3" />OOP
+        <br>
+         <!-- create a textarea -->
+         <textarea name="message" cols="30" rows="5">
+            list courses here
+         </textarea>
+        <!-- add a submit button -->
+        <input type="submit" id="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>
