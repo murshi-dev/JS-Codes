@@ -5,28 +5,24 @@ const email=document.getElementById("email");
 const password=document.getElementById("password");
 const password2=document.getElementById("password2");
 
-//function to check error
-//takes two param-first-to know which input control generates error
-//second--what message to display
-function showError(input,message)
+//write listeners for event
+form.addEventListener("submit",formSubmitted);
+
+//expand function
+function formSubmitted(event)
 {
-    //identify the input element
-    const formcontrol=input.parentElement;
-    //pass the css error class here
-    formcontrol.className="form-control error";
-    //target the <small> tag
-    //querySelector--will target or retrieve all <small> tags
-    const small=formcontrol.querySelector("small");
-    //now modify the message using innertext
-    small.innerText=message;
+    event.preventDefault();//to prevent the form by submitting itself
+    //function to check if controls are empty
+    //pass all elements in an array
+    checkRequired([username,email,password,password2]);
+    //function to check length of username
+    checkLength(username,3,10);
+    //function to check length of password
+    checkLength(password,5,10);
+    //function to check if password and confirm password match
+    checkPasswordMatch(password,password2);
 }
-function showSuccess(input)
-{
-    //identify the input element
-    const formcontrol=input.parentElement;
-    //pass the css error class here
-    formcontrol.className="form-control success";
-}
+
 
 //function to check if controls are empty
 function checkRequired(inputArr)
@@ -71,16 +67,26 @@ function checkLength(input,min,max)
       }
   }
 
-//write listeners for event
-form.addEventListener("submit",function(e){
-    e.preventDefault();//to prevent the form by submitting itself
-    //function to check if controls are empty
-    //pass all elements in an array
-    checkRequired([username,email,password,password2]);
-    //function to check length of username
-    checkLength(username,3,10);
-    //function to check length of password
-    checkLength(password,5,10);
-    //function to check if password and confirm password match
-    checkPasswordMatch(password,password2);
-})
+
+//function to check error
+//takes two param-first-to know which input control generates error
+//second--what message to display
+function showError(input,message)
+{
+    //identify the input element
+    const formcontrol=input.parentElement;
+    //pass the css error class here
+    formcontrol.className="form-control error";
+    //target the <small> tag
+    //querySelector--will target or retrieve all <small> tags
+    const small=formcontrol.querySelector("small");
+    //now modify the message using innertext
+    small.innerText=message;
+}
+function showSuccess(input)
+{
+    //identify the input element
+    const formcontrol=input.parentElement;
+    //pass the css error class here
+    formcontrol.className="form-control success";
+}
