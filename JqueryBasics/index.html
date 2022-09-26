@@ -1,0 +1,169 @@
+<html>
+  <head>
+    <!-- include the jquery CDN (Content Delivery Network) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- cdn for ui js -->
+    <!-- for creating Accordion -->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <!-- cdn for ui css -->
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>jQuery Selectors</h1>
+    </header>
+    <div class="container">
+      <h1 id="heading1">Heading 1</h1>
+      <p class="para1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit est non
+        aspernatur ex, recusandae sint eius incidunt voluptatibus sit unde hic
+        deleniti? Aut facere optio, sint iusto assumenda possimus dolorum?
+        Soluta eveniet a dolore! Porro ut placeat temporibus dolor velit.
+        Distinctio alias dicta hic sit! Velit rem minus voluptatibus consectetur
+        accusantium. Ducimus adipisci quas dolor consequatur distinctio soluta
+        iste error?
+      </p>
+    </div>
+
+    <header>
+      <h1>jQuery Effects</h1>
+    </header>
+    <div class="container">
+      <!-- create three buttons fadein,fadeout, toggle -->
+      <button id="fadeout">Fade Out</button>
+      <button id="fadein">Fade In</button>
+      <button id="fadetoggle">Fade Toggle</button>
+      <hr />
+      <!-- create four buttons for slide up,slide down
+    toggle and stop slide -->
+      <button id="slideup">Slide Up</button>
+      <button id="slidedown">Slide Down</button>
+      <button id="slidetoggle">Slide Toggle</button>
+      <button id="slidestop">Slide Stop</button>
+      <hr />
+      <!-- create a box to view the effects -->
+      <div id="box">
+        <h1>fade effects displayed here</h1>
+      </div>
+    </div>
+    <hr />
+    <header>
+      <h1>jQuery Events</h1>
+    </header>
+    <div class="container">
+      <!-- create three buttons for mouse events -->
+      <button id="btn1">Hide Text on Single Click</button>
+      <button id="btn2">Show Text on Double Click</button>
+      <button id="btn3">Toggle text on Hover</button>
+      <!-- create a para to display text
+        when button is clicked and viceversa -->
+      <p id="p1">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia dolor
+        obcaecati, explicabo sed expedita provident veniam, et, minima commodi
+        reiciendis iure facere. Deleniti veritatis quidem consequatur a
+        excepturi facere! Ab? Cumque, deserunt architecto aperiam voluptatem
+        consectetur magnam modi omnis laborum pariatur facere nam nostrum nulla
+        ipsa et molestiae odio, alias numquam amet, maiores maxime. In
+        laudantium iste officia fugit aliquam.
+      </p>
+    </div>
+    <!-- design heading and paragraph required for accordion here -->
+    <div id="accordion">
+        <h3>Section 1</h3>
+        <div>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia dolor
+                obcaecati, explicabo sed expedita provident veniam, et, minima commodi
+                reiciendis iure facere. Deleniti veritatis quidem consequatur a
+                excepturi facere! Ab? Cumque, deserunt architecto aperiam voluptatem
+                consectetur magnam modi omnis laborum pariatur facere nam nostrum nulla
+                ipsa et molestiae odio, alias numquam amet, maiores maxime. In
+                laudantium iste officia fugit aliquam.
+            </p>
+        </div>
+        <h3>Section 2</h3>
+        <div>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia dolor
+                obcaecati, explicabo sed expedita provident veniam, et, minima commodi
+                reiciendis iure facere. Deleniti veritatis quidem consequatur a
+                excepturi facere! Ab? Cumque, deserunt architecto aperiam voluptatem
+                consectetur magnam modi omnis laborum pariatur facere nam nostrum nulla
+                ipsa et molestiae odio, alias numquam amet, maiores maxime. In
+                laudantium iste officia fugit aliquam.
+            </p>
+        </div>
+        <h3>Section 3</h3>
+        <div>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia dolor
+                obcaecati, explicabo sed expedita provident veniam, et, minima commodi
+                reiciendis iure facere. Deleniti veritatis quidem consequatur a
+                excepturi facere! Ab? Cumque, deserunt architecto aperiam voluptatem
+                consectetur magnam modi omnis laborum pariatur facere nam nostrum nulla
+                ipsa et molestiae odio, alias numquam amet, maiores maxime. In
+                laudantium iste officia fugit aliquam.
+            </p>
+        </div>
+    </div>
+
+    <!-- write jquery script here -->
+    <script>
+      //all jquery codes has to be put inside
+      //the document.ready() since jquery relies on DOM
+      $(document).ready(function () {
+        $("h1#heading1").css("color", "red"); //change color of heading1 to red
+        $("p.para1").css("color", "blue");
+
+        //write script to fadeout "box"
+        //when fadeout button is clicked
+        $("#fadeout").click(function () {
+          $("#box").fadeOut(2000); //takes 2 seconds to fade out
+        });
+        //fadeIn for second button
+        $("#fadein").click(function () {
+          $("#box").fadeIn(2000); //takes 2 seconds to fade out
+        });
+        //fadeToggle for third button
+        $("#fadetoggle").click(function () {
+          $("#box").fadeToggle(2000); //takes 2 seconds to fade out
+        });
+        //slide up for first button
+        $("#slideup").click(function () {
+          $("#box").slideUp(2000);
+        });
+        //slide down for second button
+        $("#slidedown").click(function () {
+          $("#box").slideDown(2000);
+        });
+        //slide toggle for third button
+        $("#slidetoggle").click(function () {
+          $("#box").slideToggle(2000);
+        });
+        // stop slide for fourth button
+        $("#slidestop").click(function () {
+          $("#box").stop();
+        });
+        //hide text on single click
+        $("#btn1").click(function () {
+          $("#p1").hide();
+        });
+        //show text on double click
+        $("#btn2").dblclick(function () {
+          $("#p1").show();
+        });
+        //toggle text on hover
+        $("#btn3").hover(function () {
+          $("#p1").toggle();
+        });
+        //call accordion function
+        $("#accordion").accordion();
+      });
+    </script>
+  </body>
+</html>
