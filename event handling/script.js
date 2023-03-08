@@ -1,6 +1,6 @@
 function onClick()
 {
-    console.log("clicked");
+    document.write("clicked");
 }
 
 const button=document.querySelector('button');
